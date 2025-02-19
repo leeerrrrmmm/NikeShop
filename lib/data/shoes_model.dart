@@ -4,7 +4,7 @@ class ShoesModel {
   final int price;
   final String category;
   final String rate;
-  final List<int> size;
+  final List<String> size;
   final List<String> imageUrl;
 
   ShoesModel({
