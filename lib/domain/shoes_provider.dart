@@ -12,7 +12,10 @@ final List<ShoesModel> all = [
     size: [],
     imageUrl:
         [
-          'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+          'https://static.ftshp.digital/img/p/1/3/2/5/2/5/7/1325257.jpg',
+          'https://static.ftshp.digital/img/p/1/3/2/5/2/6/0/1325260.jpg',
+          'https://static.ftshp.digital/img/p/1/3/2/5/2/6/6/1325266.jpg',
+          'https://static.ftshp.digital/img/p/1/3/2/5/2/7/2/1325272.jpg',
         ]
   ),
   ShoesModel(
@@ -25,7 +28,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://static.ftshp.digital/img/p/6/2/2/3/6/0/622360.jpg',
+        'https://static.ftshp.digital/img/p/6/2/2/3/6/3/622363.jpg',
+        'https://static.ftshp.digital/img/p/6/2/2/3/6/9/622369.jpg',
+        'https://static.ftshp.digital/img/p/6/2/2/3/7/8/622378.jpg',
       ]
   ),
   ShoesModel(
@@ -38,7 +44,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://static.ftshp.digital/img/p/1/0/6/3/3/1/8/1063318.jpg',
+        'https://static.ftshp.digital/img/p/1/0/6/3/3/2/1/1063321.jpg',
+        'https://static.ftshp.digital/img/p/1/0/6/3/3/2/7/1063327.jpg',
+        'https://static.ftshp.digital/img/p/1/0/6/3/3/3/3/1063333.jpg',
       ]
   ),
   ShoesModel(
@@ -51,11 +60,14 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://static.ftshp.digital/img/p/4/3/6/0/3/3/436033.jpg',
+        'https://static.ftshp.digital/img/p/4/3/6/0/3/6/436036.jpg',
+        'https://static.ftshp.digital/img/p/4/3/6/0/4/2/436042.jpg',
+        'https://static.ftshp.digital/img/p/4/3/6/0/5/4/436054.jpg',
       ]
   ),
   ShoesModel(
-    title: 'Nike Air Max 1 "Anniversary Red"',
+    title: 'NNike W Air Max 1',
     description:
         'The Nike Air Max 1 "Anniversary Red" celebrates the 35th anniversary of the Air Max line with a nostalgic red, white, and grey color scheme and a premium construction.',
     price: 120,
@@ -64,7 +76,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://static.ftshp.digital/img/p/1/2/3/9/8/1/7/1239817.jpg',
+        'https://static.ftshp.digital/img/p/1/2/3/9/8/2/0/1239820.jpg',
+        'https://static.ftshp.digital/img/p/1/2/3/9/8/2/6/1239826.jpg',
+        'https://static.ftshp.digital/img/p/1/2/3/9/8/3/2/1239832.jpg',
       ]
   ),
   // Basketball Category
@@ -78,7 +93,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://nanoge.store/content/images/20/750x500l80br0/63884485122471.webp',
+        'https://nanoge.store/content/images/20/750x500l80br0/79065917748363.webp',
+        'https://nanoge.store/content/images/20/750x500l80br0/61616429699686.webp',
+        'https://nanoge.store/content/images/20/750x500l80br0/55135157153107.webp',
       ]
   ),
   ShoesModel(
@@ -91,7 +109,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://sportbrend.com/image/cache/webp/catalog/products/bc9/bc91e83f2abb090cea27d4beb598aa47-500x500.webp',
+        'https://sportbrend.com/image/cache/webp/catalog/products/ee5/ee59126255c561e771b2e59695d3218f-500x500.webp',
+        'https://sportbrend.com/image/cache/webp/catalog/products/0fc/0fc4a9c923449628abd9f593e0fcec20-500x500.webp',
+        'https://sportbrend.com/image/cache/webp/catalog/products/d8a/d8a0ac6fcbd89d73bb14c48935ff9430-500x500.webp',
       ]
   ),
   ShoesModel(
@@ -104,7 +125,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/cover/FV1290-100-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/FV1290-100-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/FV1290-100-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/FV1290-100-4-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -117,7 +141,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/cover_2/FQ2174-001-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FQ2174-001-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FQ2174-001-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FQ2174-001-5-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -130,7 +157,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/cover_2/FQ3680-300-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FQ3680-300/AURORA_FQ3680-300_PHCFH001-2000_1000x-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FQ3680-300/AURORA_FQ3680-300_PHSUH000-2000_1000x-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FQ3680-300/AURORA_FQ3680-300_PHSYD001-2000_1000x-1215x1280.webp',
       ]
   ),
 
@@ -145,7 +175,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196968982110_23-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-carpet-886967.jpg',
+        'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196968982110_24-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-carpet-886968.jpg',
+        'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196968982110_25-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-carpet-886969.jpg',
+        'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196968982110_22-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-carpet-886966.jpg',
       ]
   ),
   ShoesModel(
@@ -158,7 +191,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DD1579-003-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DD1579-003-3-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DD1579-003-5-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DD1579-003-6-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -171,7 +207,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-101-1-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-101-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-101-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-101-5-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -184,7 +223,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DZ1725-300-1-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DZ1725-300-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DZ1725-300-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DZ1725-300-3-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -197,7 +239,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/cover/FJ1566-101-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/FJ1566-101-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/FJ1566-101-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/FJ1566-101-6-1215x1280.webp',
       ]
   ),
 
@@ -212,7 +257,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-1-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-5-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -225,7 +273,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DR5956-81/s-l1600%20%281%29-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DR5956-81/s-l1600%20%282%29-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DR5956-81/s-l1600%20%285%29-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DR5956-81/s-l1600%20%283%29-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -238,7 +289,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5165-300-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5165-300-1-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5165-300-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5165-300-5-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -252,6 +306,9 @@ final List<ShoesModel> all = [
       imageUrl:
       [
         'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-5-1215x1280.webp',
       ]
   ),
   ShoesModel(
@@ -264,7 +321,10 @@ final List<ShoesModel> all = [
     size: [],
       imageUrl:
       [
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        'https://yesoriginal.com.ua/image/cache/catalog/i/nd/dl/77476527c7fb2f8620d29f5312f78950-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/CZ8482-800-2-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/CZ8482-800-4-1215x1280.webp',
+        'https://yesoriginal.com.ua/image/cache/catalog/other_images/CZ8482-800-3-1215x1280.webp',
       ]
   ),
 ];
