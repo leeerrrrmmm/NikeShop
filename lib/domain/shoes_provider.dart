@@ -316,7 +316,12 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.5',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/air-zoom-vapor-pro-2.jpg'],
+    imageUrl: [
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196153280649_20-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-884307.jpg',
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196153280649_26-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-884311.jpg',
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196153280649_27-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-884312.jpg',
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196153280649_25-jpg/krosivki-tenisni-cholovichi-nike-air-zoom-vapor-pro-2-884310.jpg',
+    ],
   ),
   ShoesModel(
     title: 'NikeCourt Air Zoom Lite 3',
@@ -325,7 +330,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.0',
     size: ['36', '37', '38', '39', '40'],
-    imageUrl: ['https://static.nike.com/a/images/air-zoom-lite-3.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV3258-102-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV3258-102-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV3258-102-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV3258-102-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Air Zoom GP Turbo',
@@ -334,7 +345,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.6',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/air-zoom-gp-turbo.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB7076-100-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB7076-100-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB7076-100-5-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB7076-100-4-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike React Vapor NXT',
@@ -343,7 +360,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.7',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/react-vapor-nxt.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-111-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-111-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-111-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CV0724-111-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'NikeCourt Zoom NXT',
@@ -352,7 +375,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.3',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/zoom-nxt.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2599-100-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2599-100-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2599-100-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2599-100-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Air Max Volley',
@@ -361,7 +390,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.2',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/air-max-volley.jpg'],
+    imageUrl: [
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196977661730_23-jpg/volejbol-ni-krosivki-nike-zoom-hyperace-3-bili-chorni-fotonovij-pil-1021466.jpg',
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196977661730_25-jpg/volejbol-ni-krosivki-nike-zoom-hyperace-3-bili-chorni-fotonovij-pil-1021468.jpg',
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196977661730_26-jpg/volejbol-ni-krosivki-nike-zoom-hyperace-3-bili-chorni-fotonovij-pil-1021469.jpg',
+      'https://sportano.ua/img/b52b588476b8def9e5d485faf958f16f/1/9/196977661730_27-jpg/volejbol-ni-krosivki-nike-zoom-hyperace-3-bili-chorni-fotonovij-pil-1021470.jpg',
+
+    ],
   ),
   ShoesModel(
     title: 'NikeCourt Legacy',
@@ -370,7 +405,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '8.8',
     size: ['37', '38', '39', '40', '41'],
-    imageUrl: ['https://static.nike.com/a/images/court-legacy.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DM7590-100-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DM7590-100-3-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DM7590-100-5-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DM7590-100-7-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'NikeCourt Air Zoom Zero',
@@ -379,7 +420,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.1',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/air-zoom-zero.jpg'],
+    imageUrl: [
+      'https://img.joomcdn.net/5b95b1a3bd2a270c359fa2ea1febab738cac44d7_original.jpeg',
+      'https://img.joomcdn.net/2ad50166ce1883904eeb740808740753010747b7_original.jpeg',
+      'https://img.joomcdn.net/fdfeb8aecee63894be59687ed3ed42a38514bb8e_original.jpeg',
+      'https://img.joomcdn.net/b7bc843259d6f7646eacb138bcaec13387f15459_original.jpeg',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Air Zoom Prestige',
@@ -388,7 +435,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.0',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/air-zoom-prestige.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FJ1683-100-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FJ1683-100-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FJ1683-100-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FJ1683-100-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Vapor X',
@@ -397,7 +450,13 @@ final List<ShoesModel> _tennis = [
     category: 'Tennis',
     rate: '9.5',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/vapor-x.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DC3432-125-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DC3432-125-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DC3432-125-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DC3432-125-5-1215x1280.webp',
+
+    ],
   ),
 ];
 final List<ShoesModel> _outdoor = [
@@ -408,7 +467,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.7',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/acg-mountain-fly-low.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DO9334-100/DSC_0388-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DO9334-100/DSC_0391-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DO9334-100/DSC_0394-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DO9334-100/DSC_0396-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Pegasus Trail 3 GORE-TEX',
@@ -417,7 +482,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.4',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/pegasus-trail-3.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/i/mc/dg/9f5c0fbe635fcc6cb88a5a2eb2faee12-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/mc/dg/a0d3734d0234b4538e349764bbb2efe9-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/mc/dg/0f7c36cc08b1f5805a5a4102c1ff57d9-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/mc/dg/0ddfd03034e11a74e79f3ac5c4e7cc2d-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Wildhorse 7',
@@ -426,7 +497,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.2',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/wildhorse-7.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/i/id/jk/d589c500da0513c2db8a788d2cdcb7a8-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/id/jk/02dedc58a87988b4b36802af445c7d7d-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/id/jk/4a5039651483a5011631a52565f71209-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/id/jk/3f53e4ad9612ed0a1a4cd6d43ef807f4-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Juniper Trail',
@@ -435,7 +512,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.0',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/juniper-trail.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2067-001-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2067-001-3-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2067-001-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FB2067-001-6-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Kiger 8',
@@ -444,7 +527,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.1',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/kiger-8.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR2693-002-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR2693-002-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR2693-002-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR2693-002-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike SFB Jungle',
@@ -453,7 +542,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.8',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/sfb-jungle.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DD2858-100-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DD2858-100-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DD2858-100-7-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DD2858-100-9-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Path Winter',
@@ -462,7 +557,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.3',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/path-winter.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FD0212-201-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FD0212-201-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FD0212-201-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/FD0212-201-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Rhyodomo',
@@ -471,7 +572,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.2',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/rhyodomo.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/i/dd/jm/f54f0676f24a67fcaff421a3421ed8de-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/dd/jm/eff797dc3cd0d369b1e9ba31a539ad16-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/dd/jm/e26344eaa0692dbb8d0c3afbf948d5f2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/dd/jm/2c54d3694df8dcfb1e211d6edbb6a268-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Go FlyEase',
@@ -480,7 +587,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.4',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/go-flyease.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR5540-002-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR5540-002-10-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR5540-002-3-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DR5540-002-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Manoa Leather',
@@ -489,7 +602,13 @@ final List<ShoesModel> _outdoor = [
     category: 'Outdoor',
     rate: '9.1',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/manoa-leather.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/i/gm/hm/cc125d4e76cdf50b7a5f5b6484fa8404-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/454350-003/IMG_1734-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/454350-003/IMG_1762-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/454350-003/IMG_1767-1215x1280.webp',
+
+    ],
   ),
 ];
 final List<ShoesModel> _basketball = [
@@ -500,7 +619,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.8',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/lebron-21.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/HF5353-400-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/HF5353-400-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/HF5353-400-3-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/HF5353-400-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike KD 16',
@@ -509,7 +634,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.5',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/kd-16.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DV2916-002-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DV2916-002-3-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DV2916-002-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/DV2916-002-6-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Kyrie Infinity',
@@ -518,7 +649,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.3',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/kyrie-infinity.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH5385-900-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH5385-900-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH5385-900-5-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH5385-900-3-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Zoom Freak 5',
@@ -527,7 +664,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.4',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/zoom-freak-5.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ6149-100-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ6149-100-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ6149-100-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ6149-100-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Air Jordan 37',
@@ -536,7 +679,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.7',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/air-jordan-37.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ge/aj/04c2f30a0715f73eb76c6b283e432e6f-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ge/aj/f974efc93b79b8b085b8bcb3db2685bc-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ge/aj/c3e494a2d69388fae3f6395e1530b141-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ge/aj/c94e87a587f1203a71047dd209e48462-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Cosmic Unity 3',
@@ -545,7 +694,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.2',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/cosmic-unity-3.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH1537-601-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH1537-601-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH1537-601-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DH1537-601-6-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike PG 6',
@@ -554,7 +709,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.1',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/pg-6.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/i/eg/ch/513f36c61a4ab89c9920fde852d7a447-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/eg/ch/ae6971a5ddba741873afc4fcfce5678b-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/eg/ch/5ae8bdc6dc238cb85fc689e7a9adb514-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/eg/ch/edba96058630187701db9b66f8ff8c1a-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Luka 2',
@@ -563,7 +724,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '9.6',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/luka-2.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DN1772-676-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DN1772-676-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DN1772-676-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DN1772-676-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Dunk High',
@@ -572,7 +739,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '8.9',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/dunk-high.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/i/db/jj/b930d47cf34d29cf9606042f32f63ad5-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/db/jj/b930d47cf34d29cf9606042f32f63ad5-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/db/jj/5d62573a346dedb547bdbf027296b014-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/db/jj/5b60d8483cfb222c7311b876f6e84135-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Blazer Mid 77',
@@ -581,7 +754,13 @@ final List<ShoesModel> _basketball = [
     category: 'Basketball',
     rate: '8.7',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/blazer-mid-77.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/cover_2/DD3111-100-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DD3111-100/DD3111-100_2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DD3111-100/DD3111-100_3-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DD3111-100/DD3111-100_4-1215x1280.webp',
+
+    ],
   ),
 ];
 final List<ShoesModel> _football = [
@@ -592,7 +771,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.8',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/mercurial-superfly-9.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5625-700-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5625-700-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5625-700-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5625-700-6-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Phantom GX',
@@ -601,7 +786,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.6',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/phantom-gx.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FN8199-900-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FN8199-900-3-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FN8199-900-5-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/FN8199-900-7-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Tiempo Legend 10',
@@ -610,7 +801,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.7',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/tiempo-legend-10.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV4341-700-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV4341-700-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV4341-700-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DV4341-700-5-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Mercurial Vapor 15',
@@ -619,7 +816,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.8',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/mercurial-vapor-15.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5621-300/NI1757BC58757_10_l-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5621-300/NI1757BC58757_2_l-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5621-300/NI1757BC58757_9_l-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5621-300/NI1757BC58757_8_l-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Premier III',
@@ -628,7 +831,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.0',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/premier-iii.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/AT5889-010-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/AT5889-010-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/AT5889-010-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/AT5889-010-6-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Streetgato',
@@ -637,7 +846,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '8.9',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/streetgato.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DC8466-403-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DC8466-403-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DC8466-403-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DC8466-403-6-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Phantom Luna',
@@ -646,7 +861,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.4',
     size: ['40', '41', '42', '43', '44'],
-    imageUrl: ['https://static.nike.com/a/images/phantom-luna.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/FJ2601-100/71vC%2BYE6YcL._AC_SL1500_-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/FJ2601-100/71eaeUcJ6AL._AC_SL1500_-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/FJ2601-100/719zaYg27NL._AC_SL1500_-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images_2/FJ2601-100/71Lz6Fg%2BaRL._AC_SL1500_-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Zoom Mercurial',
@@ -655,7 +876,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.9',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/zoom-mercurial.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5617-605/jr-zoom-mercurial-vapor-15-academy-mg-little-big-kids-multi-ground-soccer-cleats-jHklc1%20%281%29-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5617-605/jr-zoom-mercurial-vapor-15-academy-mg-little-big-kids-multi-ground-soccer-cleats-jHklc1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5617-605/jr-zoom-mercurial-vapor-15-academy-mg-little-big-kids-multi-ground-soccer-cleats-jHklc1%20%282%29-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/DJ5617-605/jr-zoom-mercurial-vapor-15-academy-mg-little-big-kids-multi-ground-soccer-cleats-jHklc1%20%283%29-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike React Gato',
@@ -664,7 +891,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.2',
     size: ['39', '40', '41', '42', '43'],
-    imageUrl: ['https://static.nike.com/a/images/react-gato.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CT0550-700-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CT0550-700-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CT0550-700-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/CT0550-700-6-1215x1280.webp',
+
+    ],
   ),
   ShoesModel(
     title: 'Nike Lunar Gato II',
@@ -673,7 +906,13 @@ final List<ShoesModel> _football = [
     category: 'Football',
     rate: '9.1',
     size: ['38', '39', '40', '41', '42'],
-    imageUrl: ['https://static.nike.com/a/images/lunar-gato-ii.jpg'],
+    imageUrl: [
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/580456-605-1-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/580456-605-2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/580456-605-4-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/other_images/580456-605-6-1215x1280.webp',
+
+    ],
   ),
 ];
 
