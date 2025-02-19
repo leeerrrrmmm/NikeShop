@@ -1,0 +1,14 @@
+{
+  "editor.inlayHints.enabled": "off",
+  "window.commandCenter": false,
+  "notebook.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "Dart-Code.dart-code"
+  }
+  
+}
