@@ -5,7 +5,7 @@ final List<CategoryModel> _categoryList = [
   CategoryModel(title: 'Outdoor'),
   CategoryModel(title: 'Tennis'),
   CategoryModel(title: 'Basketball'),
-  CategoryModel(title: 'football'),
+  CategoryModel(title: 'Football'),
 ];
 
 List<CategoryModel> get categoryList => _categoryList;
