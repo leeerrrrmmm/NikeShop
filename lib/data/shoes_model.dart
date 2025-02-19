@@ -5,7 +5,7 @@ class ShoesModel {
   final String category;
   final String rate;
   final List<int> size;
-  final String imageUrl;
+  final List<String> imageUrl;
 
   ShoesModel({
     required this.title,

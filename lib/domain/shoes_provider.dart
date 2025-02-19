@@ -11,7 +11,9 @@ final List<ShoesModel> all = [
     rate: '10',
     size: [],
     imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        [
+          'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+        ]
   ),
   ShoesModel(
     title: 'Nike Air Force 1 "07"',
@@ -21,8 +23,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.0',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-force-1-07.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Nike Blazer Mid "77 Vintage"',
@@ -32,8 +36,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '8.9',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/blazer-mid-77-vintage.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Nike Dunk Low "Panda"',
@@ -43,8 +49,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.2',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/dunk-low-panda.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Nike Air Max 1 "Anniversary Red"',
@@ -54,8 +62,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.3',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-max-1-anniversary-red.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   // Basketball Category
   ShoesModel(
@@ -66,8 +76,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.5',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/lebron-xxii-crown-jewel.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'KD17 "Christmas"',
@@ -77,8 +89,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.0',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/kd17-christmas.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Ja 2 "Tree Top"',
@@ -88,8 +102,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '8.8',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/ja-2-tree-top.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Sabrina 2 "White Noise"',
@@ -99,8 +115,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.2',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/sabrina-2-white-noise.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Giannis Immortality 4 "Christmas"',
@@ -110,8 +128,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '8.7',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/giannis-immortality-4-christmas.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
 
   // Tennis Category
@@ -123,8 +143,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.3',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/nikecourt-air-zoom-vapor-pro.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'NikeCourt Air Zoom Vapor Cage 4',
@@ -134,8 +156,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.0',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/nikecourt-air-zoom-vapor-cage-4.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'NikeCourt React Vapor NXT',
@@ -145,8 +169,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.2',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/nikecourt-react-vapor-nxt.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'NikeCourt Air Zoom GP Turbo',
@@ -156,8 +182,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '8.9',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/nikecourt-air-zoom-gp-turbo.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'NikeCourt Zoom NXT',
@@ -167,8 +195,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.1',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/nikecourt-zoom-nxt.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
 
   // Soccer (Football) Category
@@ -180,8 +210,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.5',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/zoom-mercurial-superfly-9-elite-fg.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Nike Phantom GT2 Elite FG',
@@ -191,8 +223,10 @@ final List<ShoesModel> all = [
     category: 'All',
     rate: '9.3',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/phantom-gt2-elite-fg.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Nike Zoom Mercurial Superfly 9 Elite FG',
@@ -202,8 +236,10 @@ final List<ShoesModel> all = [
     category: 'Soccer',
     rate: '9.5',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/zoom-mercurial-superfly-9-elite-fg.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Nike Phantom GT2 Elite FG',
@@ -213,8 +249,10 @@ final List<ShoesModel> all = [
     category: 'Soccer',
     rate: '9.3',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/phantom-gt2-elite-fg.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
   ShoesModel(
     title: 'Nike Tiempo Legend 9 Elite FG',
@@ -224,7 +262,9 @@ final List<ShoesModel> all = [
     category: 'Soccer',
     rate: '9.2',
     size: [],
-    imageUrl:
-        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/tiempo-legend-9-elite-fg.png',
+      imageUrl:
+      [
+        'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
+      ]
   ),
 ];
