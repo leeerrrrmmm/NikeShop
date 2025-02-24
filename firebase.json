@@ -1,0 +1,39 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "nike-e-commerce-shop",
+          "appId": "1:850257494363:android:64aec0ecd4065e22771a7e",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "nike-e-commerce-shop",
+          "appId": "1:850257494363:ios:d0dee864d575d258771a7e",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "nike-e-commerce-shop",
+          "appId": "1:850257494363:ios:d0dee864d575d258771a7e",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "nike-e-commerce-shop",
+          "configurations": {
+            "android": "1:850257494363:android:64aec0ecd4065e22771a7e",
+            "ios": "1:850257494363:ios:d0dee864d575d258771a7e",
+            "macos": "1:850257494363:ios:d0dee864d575d258771a7e"
+          }
+        }
+      }
+    }
+  }
+}
