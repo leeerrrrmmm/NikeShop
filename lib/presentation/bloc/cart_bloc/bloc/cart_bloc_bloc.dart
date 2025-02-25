@@ -1,7 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:meta/meta.dart';
 import 'package:nike_e_shop/data/models/shoes_model.dart';
 import 'package:nike_e_shop/domain/favorite_cart_checkout/cart_db.dart';

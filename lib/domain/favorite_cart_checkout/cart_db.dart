@@ -1,6 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:nike_e_shop/data/models/shoes_model.dart';
-import 'package:nike_e_shop/domain/favorite_cart_checkout/favorite_db.dart';
 
 class CartDb {
   final FirebaseFirestore _firesbase = FirebaseFirestore.instance;
