@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:nike_e_shop/data/models/shoes_model.dart';
-import 'package:nike_e_shop/domain/favorite,cart&checkout/favorite_db.dart';
+import 'package:nike_e_shop/domain/favorite_cart_checkout/favorite_db.dart';
 
 part 'favorite_event.dart';
 part 'favorite_state.dart';

@@ -7,10 +7,21 @@ import 'package:nike_e_shop/presentation/bloc/favorite_bloc/favorite_bloc.dart';
 import 'package:nike_e_shop/presentation/screens/DETAIL/detail_screen.dart';
 import 'package:nike_e_shop/presentation/screens/MYCART/cart_screen.dart';
 
-class ItemCard extends StatelessWidget {
+class ItemCard extends StatefulWidget {
   final ShoesModel shoes;
 
   const ItemCard({super.key, required this.shoes});
+
+  @override
+  State<ItemCard> createState() => _ItemCardState();
+}
+
+class _ItemCardState extends State<ItemCard> {
+  @override
+  void initState() {
+    super.initState();
+    context.read<FavoriteBloc>().add(LoadFavorites());
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +29,9 @@ class ItemCard extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          CupertinoPageRoute(builder: (context) => DetailScreen(shoes: shoes)),
+          CupertinoPageRoute(
+            builder: (context) => DetailScreen(shoes: widget.shoes),
+          ),
         );
       },
       child: Card(
@@ -31,7 +44,7 @@ class ItemCard extends StatelessWidget {
                   height: 200,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: NetworkImage(shoes.imageUrl[0]),
+                      image: NetworkImage(widget.shoes.imageUrl[0]),
                     ),
                   ),
                   child: Stack(
@@ -44,18 +57,18 @@ class ItemCard extends StatelessWidget {
                             bool isFavorite = false;
                             if (state is FavoritesLoaded) {
                               isFavorite = state.favorites.any(
-                                (el) => el.title == shoes.title,
+                                (el) => el.title == widget.shoes.title,
                               );
                             }
                             return IconButton(
                               onPressed: () {
                                 if (!isFavorite) {
                                   context.read<FavoriteBloc>().add(
-                                    AddToFavorite(shoes),
+                                    AddToFavorite(widget.shoes),
                                   );
                                 } else {
                                   context.read<FavoriteBloc>().add(
-                                    RemoveFromFavorite(shoes),
+                                    RemoveFromFavorite(widget.shoes),
                                   );
                                 }
                               },
@@ -75,7 +88,7 @@ class ItemCard extends StatelessWidget {
                 10.hBox,
                 Text(
                   textAlign: TextAlign.center,
-                  shoes.title,
+                  widget.shoes.title,
                   style: TextStyle(
                     fontSize: 19,
                     fontFamily: 'Raleway',
@@ -92,7 +105,7 @@ class ItemCard extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        '\$ ${shoes.price.toStringAsFixed(2)}',
+                        '\$ ${widget.shoes.price.toStringAsFixed(2)}',
                         style: TextStyle(
                           fontFamily: 'Raleway',
                           fontSize: 20,

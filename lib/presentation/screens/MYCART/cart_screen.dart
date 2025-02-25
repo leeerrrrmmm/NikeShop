@@ -75,7 +75,7 @@ class _CartScreenState extends State<CartScreen> {
 
                     /// LIST VIEW OF CART ITEM
                     SizedBox(
-                      height: 580,
+                      height: 538,
                       child: ListView.builder(
                         itemCount: state.cartShoes.length,
                         itemBuilder: (context, index) {
@@ -176,7 +176,7 @@ class _CartScreenState extends State<CartScreen> {
                       ),
                     ),
                     Container(
-                      height: 218,
+                      height: 220,
                       width: double.infinity,
                       decoration: BoxDecoration(color: Colors.grey.shade200),
                       child: Padding(
@@ -275,7 +275,7 @@ class _CartScreenState extends State<CartScreen> {
                               child: Container(
                                 margin: const EdgeInsets.all(15),
                                 width: double.infinity,
-                                height: 55,
+                                height: 54,
                                 decoration: BoxDecoration(
                                   color: Color(0xff0d6efd),
                                   borderRadius: BorderRadius.circular(15),
