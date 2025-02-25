@@ -10,6 +10,15 @@ class AuthService {
     return _auth.currentUser;
   }
 
+  Future<bool> checkIfUserExists(String email) async {
+    try {
+      var result = await _auth.fetchSignInMethodsForEmail(email);
+      return result.isNotEmpty;
+    } catch (e) {
+      return false;
+    }
+  }
+
   Future<UserCredential> registerWithEmailAndPassword(
     String email,
     String password,
@@ -21,6 +30,7 @@ class AuthService {
 
       // Обновляем displayName
       await userCredential.user?.updateDisplayName(displayName);
+      await userCredential.user?.updatePassword(password);
       await userCredential.user?.reload(); // Перезагружаем пользователя
 
       // Получаем обновленного пользователя
@@ -30,6 +40,7 @@ class AuthService {
         'uid': user.uid,
         'email': user.email,
         'displayName': user.displayName,
+        'password': password,
         'createdAt': FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
 

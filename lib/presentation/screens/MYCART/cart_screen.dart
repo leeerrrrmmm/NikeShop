@@ -46,7 +46,7 @@ class _CartScreenState extends State<CartScreen> {
 
             double totalCost = subTotalPrice + deliveryPrice;
 
-            return state.cartShoes.length <= 0
+            return state.cartShoes.isEmpty
                 ? Center(
                   child: Text(
                     'Items: ${state.cartShoes.length}',
@@ -223,7 +223,7 @@ class _CartScreenState extends State<CartScreen> {
                                   ),
                                 ),
                                 Text(
-                                  '\$${deliveryPrice}', // Используем totalPrice для вывода общей стоимости
+                                  '\$$deliveryPrice', // Используем totalPrice для вывода общей стоимости
                                   style: TextStyle(
                                     fontFamily: 'Raleway',
                                     fontSize: 20,
@@ -247,7 +247,7 @@ class _CartScreenState extends State<CartScreen> {
                                   ),
                                 ),
                                 Text(
-                                  '\$${totalCost}',
+                                  '\$$totalCost',
                                   style: TextStyle(
                                     fontFamily: 'Raleway',
                                     fontSize: 20,

@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_e_shop/data/models/shoes_model.dart';
 import 'package:nike_e_shop/data/data_source/category_provider.dart';
@@ -11,7 +10,7 @@ import 'package:nike_e_shop/presentation/screens/MAIN/widgets/item_card.dart';
 import 'package:shrink_sidemenu/shrink_sidemenu.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   _MainScreenState createState() => _MainScreenState();

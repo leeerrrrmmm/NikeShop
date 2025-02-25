@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nike_e_shop/domain/auth_service.dart';
+import 'package:nike_e_shop/domain/auth/auth_service.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
 import 'package:nike_e_shop/presentation/screens/BOTTOM_BAR/custom_bottom_bar.dart';
 import 'package:nike_e_shop/presentation/screens/LOGIN/widgets/build_text_editing_login_column.dart';
@@ -20,9 +20,9 @@ class _LoginScreenState extends State<LoginScreen> {
   final TextEditingController _passwordController = TextEditingController();
 
   void login() async {
-    final _authService = AuthService();
+    final authService = AuthService();
     try {
-      final userCredential = await _authService.loginWithEmailAndPassword(
+      final userCredential = await authService.loginWithEmailAndPassword(
         _emailController.text,
         _passwordController.text,
       );
@@ -41,8 +41,12 @@ class _LoginScreenState extends State<LoginScreen> {
         context: context,
         builder:
             (context) => AlertDialog(
-              title: Text(' Error'),
-              content: Text(_authService.getErrorMessage(e.toString())),
+              backgroundColor: Colors.red,
+              title: Text(' Error', style: TextStyle(color: Colors.white)),
+              content: Text(
+                authService.getErrorMessage(e.toString()),
+                style: TextStyle(color: Colors.white),
+              ),
             ),
       );
     }
@@ -109,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           labelText: 'Email Adress',
                           text: 'Enter Your Email...',
                           obscure: false,
-                          keyBoardType: TextInputType.text,
+                          keyBoardType: TextInputType.emailAddress,
                           textController: _emailController,
                         ),
                         15.hBox,

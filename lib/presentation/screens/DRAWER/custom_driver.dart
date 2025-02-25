@@ -1,17 +1,18 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nike_e_shop/domain/auth_service.dart';
+import 'package:nike_e_shop/domain/auth/auth_service.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
+import 'package:nike_e_shop/presentation/screens/SETTINGS/settings_screen.dart';
 
 class DrawerMenu extends StatelessWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
 
-  const DrawerMenu({Key? key, required this.scaffoldKey}) : super(key: key);
+  const DrawerMenu({super.key, required this.scaffoldKey});
 
   @override
   Widget build(BuildContext context) {
-    final _auth = AuthService();
-    final _curUser = _auth.getCurrentUser();
+    final auth = AuthService();
+    final curUser = auth.getCurrentUser();
 
     return Drawer(
       backgroundColor: Color(0xFF0D6EFD),
@@ -24,7 +25,7 @@ class DrawerMenu extends StatelessWidget {
                 child: Image.asset('asset/image/nig.png', fit: BoxFit.contain),
               ),
               Text(
-                '${_curUser!.displayName ?? ''}',
+                curUser!.displayName ?? '',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -36,31 +37,42 @@ class DrawerMenu extends StatelessWidget {
           ),
           40.hBox,
           _BuildListTileWidget(
+            onTap: () {},
             scaffoldKey: scaffoldKey,
             text: 'Profile',
             icon: CupertinoIcons.person,
           ),
           _BuildListTileWidget(
+            onTap: () {},
             scaffoldKey: scaffoldKey,
             text: 'My Cart',
             icon: CupertinoIcons.bag,
           ),
           _BuildListTileWidget(
+            onTap: () {},
             scaffoldKey: scaffoldKey,
             text: 'Favorite',
             icon: CupertinoIcons.heart,
           ),
           _BuildListTileWidget(
+            onTap: () {},
             scaffoldKey: scaffoldKey,
             text: 'Orders',
             icon: CupertinoIcons.bus,
           ),
           _BuildListTileWidget(
+            onTap: () {},
             scaffoldKey: scaffoldKey,
             text: 'Notification',
             icon: CupertinoIcons.bell,
           ),
           _BuildListTileWidget(
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(builder: (context) => SettingsScreen()),
+              );
+            },
             scaffoldKey: scaffoldKey,
             text: 'Settings',
             icon: Icons.settings_outlined,
@@ -74,8 +86,10 @@ class DrawerMenu extends StatelessWidget {
 class _BuildListTileWidget extends StatelessWidget {
   final String text;
   final IconData icon;
+  final void Function()? onTap;
 
   const _BuildListTileWidget({
+    required this.onTap,
     required this.scaffoldKey,
     required this.text,
     required this.icon,
@@ -97,7 +111,15 @@ class _BuildListTileWidget extends StatelessWidget {
         ),
       ),
       onTap: () {
+        // Закрываем Drawer
         scaffoldKey.currentState?.openEndDrawer();
+
+        // Даем небольшой таймаут перед навигацией, чтобы Drawer успел закрыться
+        Future.delayed(Duration(milliseconds: 200), () {
+          if (onTap != null) {
+            onTap!();
+          }
+        });
       },
     );
   }

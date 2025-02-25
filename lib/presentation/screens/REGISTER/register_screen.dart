@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:nike_e_shop/domain/auth_service.dart';
+import 'package:nike_e_shop/domain/auth/auth_service.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
 import 'package:nike_e_shop/presentation/screens/BOTTOM_BAR/custom_bottom_bar.dart';
 import 'package:nike_e_shop/presentation/screens/LOGIN/login_screen.dart';
@@ -23,32 +23,90 @@ class _RegisterScreenState extends State<RegisterScreen> {
       TextEditingController();
 
   void register() async {
-    final _authService = AuthService();
+    final authService = AuthService();
     try {
-      _authService.registerWithEmailAndPassword(
+      // Проверка на существование пользователя с таким email
+      bool userExists = await authService.checkIfUserExists(
         _emailController.text,
-        _passwordController.text,
-        _nameController.text,
       );
-    } catch (e) {
-      showDialog(
-        context: context,
-        builder: (context) => AlertDialog(title: Text(e.toString())),
-      );
-    }
 
-    if (_authService != null) {
-      Navigator.pushAndRemoveUntil(
-        context,
-        CupertinoPageRoute(builder: (context) => CustomBottomBars()),
-        (route) => false,
-      );
-    } else {
+      if (userExists) {
+        // Если пользователь уже существует, показываем AlertDialog
+        showDialog(
+          context: context,
+          builder:
+              (context) => AlertDialog(
+                title: Text('User already registered'),
+                content: Text(
+                  'This email is already associated with an account.',
+                ),
+                actions: [
+                  TextButton(
+                    onPressed: () {
+                      Navigator.pop(context); // Закрываем диалог
+                    },
+                    child: Text('OK'),
+                  ),
+                ],
+              ),
+        );
+      } else {
+        // Если пользователь не существует, регистрируем его
+        await authService.registerWithEmailAndPassword(
+          _emailController.text,
+          _passwordController.text,
+          _nameController.text,
+        );
+
+        // Переход на экран после успешной регистрации
+        await Navigator.pushAndRemoveUntil(
+          context,
+          CupertinoPageRoute(builder: (context) => CustomBottomBars()),
+          (route) => false,
+        );
+      }
+    } catch (e) {
+      // Показать ошибку, если она возникает
       showDialog(
         context: context,
         builder:
-            (contexgt) => AlertDialog(title: Text('User already registered')),
+            (context) => AlertDialog(
+              title: Text('Error'),
+              content: Text(e.toString()),
+              actions: [
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context); // Закрываем диалог
+                  },
+                  child: Text('OK'),
+                ),
+              ],
+            ),
       );
+    }
+  }
+
+  void registerWithGoogle() async {
+    try {
+      final userCredential = await AuthService().registerGoogle();
+      if (userCredential != null) {
+        await Navigator.pushAndRemoveUntil(
+          context,
+          CupertinoPageRoute(builder: (context) => CustomBottomBars()),
+          (route) => false,
+        );
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Google Sign-In was SUCCESS')));
+      } else {
+        ScaffoldMessenger.of(
+          context,
+        ).showSnackBar(SnackBar(content: Text('Google Sign-In was CANCELLED')));
+      }
+    } catch (e) {
+      ScaffoldMessenger.of(
+        context,
+      ).showSnackBar(SnackBar(content: Text('Error: ${e.toString()}')));
     }
   }
 
@@ -157,7 +215,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                       MySecondButton(
                         imagePath: 'asset/image/google.png',
-                        onTap: () {},
+                        onTap: registerWithGoogle,
                       ),
                       10.hBox,
                       GestureDetector(

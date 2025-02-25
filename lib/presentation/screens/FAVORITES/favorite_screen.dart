@@ -42,36 +42,50 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
       body: BlocBuilder<FavoriteBloc, FavoriteState>(
         builder: (context, state) {
           if (state is FavoritesLoaded) {
-            return GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 0.56,
-                crossAxisSpacing: 5,
-                mainAxisSpacing: 5,
-              ),
-              itemCount: state.favorites.length,
-              itemBuilder: (context, index) {
-                final shoes = state.favorites[index];
-                return Card(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
+            return state.favorites.isEmpty
+                ? Center(
+                  child: Text(
+                    textAlign: TextAlign.center,
+                    'Also You Have Not Any Favorite Items',
+                    style: TextStyle(
+                      fontFamily: 'Raleway',
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                )
+                : GridView.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    childAspectRatio: 0.56,
+                    crossAxisSpacing: 5,
+                    mainAxisSpacing: 5,
+                  ),
+                  itemCount: state.favorites.length,
+                  itemBuilder: (context, index) {
+                    final shoes = state.favorites[index];
+                    return Card(
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Container(
-                            height: 200,
-                            decoration: BoxDecoration(
-                              image: DecorationImage(
-                                image: NetworkImage(shoes.imageUrl[0]),
-                              ),
-                            ),
-                            child: Stack(
-                              children: [
-                                Positioned(
-                                  top: 10,
-                                  left: 5,
-                                  child:
-                                      BlocBuilder<FavoriteBloc, FavoriteState>(
+                          Column(
+                            children: [
+                              Container(
+                                height: 200,
+                                decoration: BoxDecoration(
+                                  image: DecorationImage(
+                                    image: NetworkImage(shoes.imageUrl[0]),
+                                  ),
+                                ),
+                                child: Stack(
+                                  children: [
+                                    Positioned(
+                                      top: 10,
+                                      left: 5,
+                                      child: BlocBuilder<
+                                        FavoriteBloc,
+                                        FavoriteState
+                                      >(
                                         builder: (context, state) {
                                           bool isFavorite = false;
                                           if (state is FavoritesLoaded) {
@@ -105,69 +119,70 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
                                           );
                                         },
                                       ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          10.hBox,
-                          Text(
-                            textAlign: TextAlign.center,
-                            shoes.title,
-                            style: TextStyle(
-                              fontSize: 19,
-                              fontFamily: 'Raleway',
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  '\$ ${shoes.price.toStringAsFixed(2)}',
-                                  style: TextStyle(
-                                    fontFamily: 'Raleway',
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                                    ),
+                                  ],
                                 ),
                               ),
-                              Container(
-                                width: 50,
-                                height: 50,
-                                decoration: BoxDecoration(
-                                  color: Color(0xFF0d6efd),
-                                  borderRadius: BorderRadius.only(
-                                    topLeft: Radius.circular(20),
-                                    bottomRight: Radius.circular(10),
-                                  ),
+                              10.hBox,
+                              Text(
+                                textAlign: TextAlign.center,
+                                shoes.title,
+                                style: TextStyle(
+                                  fontSize: 19,
+                                  fontFamily: 'Raleway',
+                                  fontWeight: FontWeight.bold,
                                 ),
-                                child: Center(
-                                  child: IconButton(
-                                    onPressed: () {
-                                      context.read<CartBloc>().add(
-                                        AddItemToCart(shoes),
-                                      );
-                                    },
-                                    icon: Icon(CupertinoIcons.add),
-                                    color: Colors.white,
+                              ),
+                            ],
+                          ),
+                          Column(
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Text(
+                                      '\$ ${shoes.price.toStringAsFixed(2)}',
+                                      style: TextStyle(
+                                        fontFamily: 'Raleway',
+                                        fontSize: 20,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  Container(
+                                    width: 50,
+                                    height: 50,
+                                    decoration: BoxDecoration(
+                                      color: Color(0xFF0d6efd),
+                                      borderRadius: BorderRadius.only(
+                                        topLeft: Radius.circular(20),
+                                        bottomRight: Radius.circular(10),
+                                      ),
+                                    ),
+                                    child: Center(
+                                      child: IconButton(
+                                        onPressed: () {
+                                          context.read<CartBloc>().add(
+                                            AddItemToCart(shoes),
+                                          );
+                                        },
+                                        icon: Icon(CupertinoIcons.add),
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ],
                           ),
                         ],
                       ),
-                    ],
-                  ),
+                    );
+                  },
                 );
-              },
-            );
           } else {
             return Center(child: CircularProgressIndicator());
           }

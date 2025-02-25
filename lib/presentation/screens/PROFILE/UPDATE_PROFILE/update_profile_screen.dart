@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nike_e_shop/domain/auth/auth_service.dart';
 import 'package:nike_e_shop/presentation/screens/BOTTOM_BAR/custom_bottom_bar.dart';
 import 'package:nike_e_shop/presentation/screens/PROFILE/widgets/build_column.dart';
 import 'package:nike_e_shop/presentation/screens/PROFILE/widgets/profile_button.dart';
@@ -9,6 +10,9 @@ class UpdateProfileScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final auth = AuthService();
+    final curUser = auth.getCurrentUser();
+
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -20,7 +24,7 @@ class UpdateProfileScreen extends StatelessWidget {
                 child: Image.asset('asset/image/nig.png'),
               ),
               Text(
-                'Inspiration',
+                '${curUser!.displayName}',
                 style: TextStyle(
                   fontSize: 20,
                   fontFamily: 'Raleway',

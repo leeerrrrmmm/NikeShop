@@ -25,13 +25,19 @@ class BuildColumnWithTextFieldAndText extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          TextField(
-            decoration: InputDecoration(
-              label: Text(labelText, style: TextStyle(fontSize: 18)),
-              labelStyle: TextStyle(fontFamily: 'Raleway'),
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(20),
-              ),
+          Container(
+            padding: const EdgeInsets.all(10.0),
+            alignment: Alignment.centerLeft,
+            height: 50,
+            width: double.infinity,
+            decoration: BoxDecoration(
+              border: Border.all(color: Colors.black, width: 1),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Text(
+              textAlign: TextAlign.center,
+              labelText,
+              style: TextStyle(fontSize: 18),
             ),
           ),
         ],
