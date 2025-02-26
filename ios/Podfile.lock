@@ -1217,6 +1217,8 @@ PODS:
     - nanopb (~> 3.30910.0)
   - FirebaseSharedSwift (11.8.0)
   - Flutter (1.0.0)
+  - flutter_credit_card (0.0.1):
+    - Flutter
   - google_sign_in_ios (0.0.1):
     - AppAuth (>= 1.7.4)
     - Flutter
@@ -1359,6 +1361,7 @@ DEPENDENCIES:
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - Flutter (from `Flutter`)
+  - flutter_credit_card (from `.symlinks/plugins/flutter_credit_card/ios`)
   - google_sign_in_ios (from `.symlinks/plugins/google_sign_in_ios/darwin`)
 
 SPEC REPOS:
@@ -1395,6 +1398,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_core/ios"
   Flutter:
     :path: Flutter
+  flutter_credit_card:
+    :path: ".symlinks/plugins/flutter_credit_card/ios"
   google_sign_in_ios:
     :path: ".symlinks/plugins/google_sign_in_ios/darwin"
 
@@ -1416,6 +1421,7 @@ SPEC CHECKSUMS:
   FirebaseFirestoreInternal: 8c5921c360a70e447bfeefb245f450e8b50e750b
   FirebaseSharedSwift: 672954eac7b141d6954fab9a32d45d6b1d922df8
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
+  flutter_credit_card: 48fb35065294868bc6a3e7f18a42f28929b84f48
   google_sign_in_ios: 4111e87aa5e24a4404f00ea13479f35e571969cc
   GoogleSignIn: d4281ab6cf21542b1cfaff85c191f230b399d2db
   GoogleUtilities: 26a3abef001b6533cf678d3eb38fd3f614b7872d
