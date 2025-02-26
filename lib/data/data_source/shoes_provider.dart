@@ -278,7 +278,7 @@ final List<ShoesModel> _all = [
     ],
   ),
   ShoesModel(
-    title: 'Nike Phantom GT2 Elite FG',
+    title: 'Nike Phantom GT2 Eldsadsaite FG',
     description:
         'Engineered for precise touch and control, the Nike Phantom GT2 Elite FG offers an updated design and patterning for enhanced performance.',
     price: 250,
@@ -286,10 +286,10 @@ final List<ShoesModel> _all = [
     rate: '9.3',
     size: [],
     imageUrl: [
-      'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/air-jordan-1-retro-high-og-shoe.png',
-      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-2-1215x1280.webp',
-      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-4-1215x1280.webp',
-      'https://yesoriginal.com.ua/image/cache/catalog/additional_disk/other_images_3/DJ4977-601-5-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ap/gb/5f6b0dd0e233f530d77c2da74efd56b2-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ap/gb/d36dca482a51af5ea5e8c085a9124323-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ap/gb/764147fb3b94c07b8bd9e59c56c45bfb-1215x1280.webp',
+      'https://yesoriginal.com.ua/image/cache/catalog/i/ap/gb/9732114ec11ae2f88f7d63528390a665-1215x1280.webp',
     ],
   ),
   ShoesModel(

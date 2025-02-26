@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_e_shop/domain/auth/auth_service.dart';
+import 'package:nike_e_shop/presentation/screens/CREDIT_CARD/screens/credit_card_screen.dart';
 import 'package:nike_e_shop/presentation/screens/LOGIN/login_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
@@ -28,7 +30,29 @@ class SettingsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(title: Text('Settings'), centerTitle: true),
-      body: Center(child: TextButton(onPressed: logout, child: Text('Exit'))),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          GestureDetector(
+            onTap: () {
+              Navigator.pushReplacement(
+                context,
+                CupertinoPageRoute(builder: (context) => CreditCardScreen()),
+              );
+            },
+            child: Row(
+              children: [
+                Icon(Icons.payment, size: 40),
+                Text('Payment', style: TextStyle(fontSize: 25)),
+              ],
+            ),
+          ),
+          TextButton(
+            onPressed: logout,
+            child: Text('Exit', style: TextStyle(fontSize: 25)),
+          ),
+        ],
+      ),
     );
   }
 }

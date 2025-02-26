@@ -5,6 +5,7 @@ import 'package:nike_e_shop/domain/gate/auth_gate.dart';
 import 'package:nike_e_shop/firebase_options.dart';
 import 'package:nike_e_shop/presentation/bloc/cart_bloc/bloc/cart_bloc_bloc.dart';
 import 'package:nike_e_shop/presentation/bloc/favorite_bloc/favorite_bloc.dart';
+import 'package:nike_e_shop/presentation/bloc/user_cards_bloc/bloc/user_card_bloc.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,6 +14,9 @@ void main() async {
 
   runApp(const MyApp());
 }
+/**
+   * ! ДОБАВИТЬ ВОЗМОЖНОСТЬ ДОБАВИТЬ КАРТУ ДЛЯ ИМИТАЦИИ ОПЛАТЫ И ЕЕ СОХРАНЕНИЕ У ПОЛЬЗОВАТЕЛЯ
+   */
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -23,6 +27,7 @@ class MyApp extends StatelessWidget {
       providers: [
         BlocProvider(create: (context) => FavoriteBloc()),
         BlocProvider(create: (context) => CartBloc()),
+        BlocProvider(create: (context) => UserCardBloc()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
