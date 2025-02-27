@@ -17,7 +17,6 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     final AuthService auth = AuthService();
-    final curUser = auth.getCurrentUser();
 
     void logout() async {
       try {
