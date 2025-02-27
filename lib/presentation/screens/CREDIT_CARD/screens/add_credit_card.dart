@@ -1,13 +1,18 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_credit_card/flutter_credit_card.dart';
+import 'package:holdable_button/holdable_button.dart';
+import 'package:holdable_button/utils/utils.dart';
 import 'package:nike_e_shop/data/models/credit_card_model.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
 import 'package:nike_e_shop/presentation/bloc/user_cards_bloc/bloc/user_card_bloc.dart';
+import 'package:nike_e_shop/presentation/screens/BOTTOM_BAR/custom_bottom_bar.dart';
 import 'package:nike_e_shop/presentation/screens/CREDIT_CARD/widgets/add_card_button.dart';
 import 'package:nike_e_shop/presentation/screens/CREDIT_CARD/widgets/card_field.dart';
+import 'package:vibration/vibration.dart';
 
 class AddCreditCardScreen extends StatefulWidget {
   const AddCreditCardScreen({super.key});
@@ -17,6 +22,7 @@ class AddCreditCardScreen extends StatefulWidget {
 }
 
 class _AddCreditCardScreenState extends State<AddCreditCardScreen> {
+  String buttonText = 'Add';
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final GlobalKey<FormState> _globalKey = GlobalKey<FormState>();
   late final TextEditingController _numberCard = TextEditingController();
@@ -53,7 +59,7 @@ class _AddCreditCardScreenState extends State<AddCreditCardScreen> {
                   cardHolderName: _cadrHolder.text,
                   cvvCode: _cvvCard.text,
                   showBackView: false,
-                  onCreditCardWidgetChange: (CreditCardBrand brand) {},
+                  onCreditCardWidgetChange: (CreditCardBrand? data) {},
                 ),
                 10.hBox,
 
@@ -114,7 +120,15 @@ class _AddCreditCardScreenState extends State<AddCreditCardScreen> {
                     //CVV
                     Expanded(
                       child: CardField(
-                        validator: (val) {},
+                        validator: (val) {
+                          if (val == null || val.isEmpty) {
+                            return 'Please enter the cvv code';
+                          } else if (val.length < 3) {
+                            return 'CVV must be at least 3 characters';
+                          } else {
+                            return null;
+                          }
+                        },
                         hintText: 'Enter your cvv..',
                         labelText: 'CVV',
                         inputFormatters: [
@@ -138,9 +152,7 @@ class _AddCreditCardScreenState extends State<AddCreditCardScreen> {
                     if (val == null || val.isEmpty) {
                       return 'Please enter the cardholder name';
                     }
-                    if (!RegExp(
-                      r"^[A-Z][a-z]+(?: [A-Z][a-z]+)+$",
-                    ).hasMatch(val)) {
+                    if (!RegExp(r"^[A-Za-z]+(?: [A-Za-z]+)*$").hasMatch(val)) {
                       return 'Enter first and last name in Latin letters';
                     }
                     if (val.length < 2 || val.length > 26) {
@@ -162,20 +174,51 @@ class _AddCreditCardScreenState extends State<AddCreditCardScreen> {
               builder: (context, state) {
                 return AddCardButtons(
                   onTap: () {
-                    context.read<UserCardBloc>().add(
-                      AddCreditCard(
-                        UserCreditCardModel(
-                          cardId: _auth.currentUser!.uid,
-                          cardNumber: _numberCard.text,
-                          cvv: _cvvCard.text,
-                          date: _dateCard.text,
-                          cardHolder: _cadrHolder.text,
+                    if (_globalKey.currentState!.validate()) {
+                      context.read<UserCardBloc>().add(
+                        AddCreditCard(
+                          UserCreditCardModel(
+                            cardId: _auth.currentUser!.uid,
+                            cardNumber: _numberCard.text,
+                            cvv: _cvvCard.text,
+                            date: _dateCard.text,
+                            cardHolder: _cadrHolder.text,
+                          ),
                         ),
-                      ),
-                    );
+                      );
+
+                      Navigator.pushAndRemoveUntil(
+                        context,
+                        CupertinoPageRoute(
+                          builder: (context) => CustomBottomBars(),
+                        ),
+                        (route) => false,
+                      );
+                    }
                   },
                 );
               },
+            ),
+
+            HoldableButton(
+              loadingType: LoadingType.fillingLoading,
+              buttonColor: Colors.indigo,
+              loadingColor: Colors.green.shade900,
+              duration: 2,
+              radius: 10,
+              onConfirm: () async {
+                if (await Vibration.hasVibrator()) {
+                  Vibration.vibrate(duration: 200);
+                }
+                setState(() {
+                  buttonText = 'Successfuly added!';
+                });
+                print('finis');
+              },
+              child: Text(buttonText, style: TextStyle(color: Colors.white)),
+              strokeWidth: 3,
+              width: double.infinity,
+              height: 60,
             ),
           ],
         ),

@@ -1,9 +1,13 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:nike_e_shop/data/models/credit_card_model.dart';
+import 'package:nike_e_shop/domain/auth/auth_service.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
 import 'package:nike_e_shop/presentation/screens/CHECKOUT/widget/bottom_widget.dart';
 
-class CheckoutScreen extends StatelessWidget {
+class CheckoutScreen extends StatefulWidget {
   final double subtotal;
   final double delivery;
   final double totalPrice;
@@ -13,6 +17,43 @@ class CheckoutScreen extends StatelessWidget {
     required this.delivery,
     required this.totalPrice,
   });
+
+  @override
+  State<CheckoutScreen> createState() => _CheckoutScreenState();
+}
+
+class _CheckoutScreenState extends State<CheckoutScreen> {
+  String formatCardNumber(String cardNumber) {
+    int length = cardNumber.length;
+    if (length <= 8) {
+      return cardNumber;
+    }
+    String visibleDigits = cardNumber.substring(length - 4);
+    String hiddenDigits = '*' * (length - 4);
+    return hiddenDigits + visibleDigits;
+  }
+
+  Future<List<UserCreditCardModel>> fetchUserData(String userId) async {
+    List<UserCreditCardModel> userCards = [];
+    try {
+      var usersDoc =
+          await FirebaseFirestore.instance
+              .collection('Users')
+              .doc(userId)
+              .collection('UserCreditCards')
+              .get();
+
+      for (var el in usersDoc.docs) {
+        userCards.add(UserCreditCardModel.creditFromMap(el.data()));
+      }
+    } catch (e) {
+      print('Ошибка: $e');
+    }
+    return userCards;
+  }
+
+  String? selectedDropDownButton;
+  final curUser = AuthService().getCurrentUser();
 
   @override
   Widget build(BuildContext context) {
@@ -212,7 +253,7 @@ class CheckoutScreen extends StatelessWidget {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'Dbl Card',
+                                'Selected Card',
                                 style: TextStyle(
                                   fontSize: 17,
                                   fontFamily: 'Raleway',
@@ -220,7 +261,53 @@ class CheckoutScreen extends StatelessWidget {
                                 ),
                               ),
                               5.hBox,
-                              Text('**** **** 0682 3218'),
+                              FutureBuilder<List<UserCreditCardModel>>(
+                                future: fetchUserData(curUser!.uid),
+                                builder: (context, snap) {
+                                  if (snap.connectionState ==
+                                      ConnectionState.waiting) {
+                                    return Center(
+                                      child: CircularProgressIndicator(),
+                                    );
+                                  }
+
+                                  if (snap.hasError) {
+                                    return Center(
+                                      child: Text('Error: ${snap.error}'),
+                                    );
+                                  }
+
+                                  if (selectedDropDownButton == null &&
+                                      snap.data!.isNotEmpty) {
+                                    selectedDropDownButton =
+                                        snap.data!.first.cardNumber;
+                                  }
+
+                                  return DropdownButton<String>(
+                                    borderRadius: BorderRadius.circular(10),
+                                    value: selectedDropDownButton,
+                                    items:
+                                        snap.data!
+                                            .map(
+                                              (card) =>
+                                                  DropdownMenuItem<String>(
+                                                    value: card.cardNumber,
+                                                    child: Text(
+                                                      formatCardNumber(
+                                                        card.cardNumber,
+                                                      ),
+                                                    ),
+                                                  ),
+                                            )
+                                            .toList(),
+                                    onChanged: (String? val) {
+                                      setState(() {
+                                        selectedDropDownButton = val;
+                                      });
+                                    },
+                                  );
+                                },
+                              ),
                             ],
                           ),
                         ],
@@ -234,9 +321,9 @@ class CheckoutScreen extends StatelessWidget {
           ),
           20.hBox,
           BottomWidget(
-            subtotal: subtotal,
-            delivery: delivery,
-            total: totalPrice,
+            subtotal: widget.subtotal,
+            delivery: widget.delivery,
+            total: widget.totalPrice,
           ),
         ],
       ),

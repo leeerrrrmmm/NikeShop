@@ -1,5 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
+import 'package:nike_e_shop/presentation/screens/BOTTOM_BAR/custom_bottom_bar.dart';
 
 class BottomWidget extends StatelessWidget {
   const BottomWidget({
@@ -94,21 +96,30 @@ class BottomWidget extends StatelessWidget {
             ],
           ),
           15.hBox,
-          Container(
-            width: double.infinity,
-            height: 60,
-            decoration: BoxDecoration(
-              color: Color(0xff0d6efd),
-              borderRadius: BorderRadius.circular(15),
-            ),
-            child: Center(
-              child: Text(
-                'Checkout',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontFamily: 'Raleway',
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
+          GestureDetector(
+            onTap: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                CupertinoPageRoute(builder: (context) => CustomBottomBars()),
+                (route) => false,
+              );
+            },
+            child: Container(
+              width: double.infinity,
+              height: 60,
+              decoration: BoxDecoration(
+                color: Color(0xff0d6efd),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: Center(
+                child: Text(
+                  'Checkout',
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontFamily: 'Raleway',
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             ),
