@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
-import 'package:nike_e_shop/presentation/screens/BOTTOM_BAR/custom_bottom_bar.dart';
 
 class BottomWidget extends StatelessWidget {
   const BottomWidget({
@@ -9,11 +8,13 @@ class BottomWidget extends StatelessWidget {
     required this.subtotal,
     required this.delivery,
     required this.total,
+    required this.onTap,
   });
 
   final double subtotal;
   final double total;
   final double delivery;
+  final void Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -97,13 +98,7 @@ class BottomWidget extends StatelessWidget {
           ),
           15.hBox,
           GestureDetector(
-            onTap: () {
-              Navigator.pushAndRemoveUntil(
-                context,
-                CupertinoPageRoute(builder: (context) => CustomBottomBars()),
-                (route) => false,
-              );
-            },
+            onTap: onTap,
             child: Container(
               width: double.infinity,
               height: 60,
