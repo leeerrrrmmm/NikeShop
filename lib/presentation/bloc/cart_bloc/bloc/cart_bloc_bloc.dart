@@ -43,5 +43,13 @@ class CartBloc extends Bloc<CartBlocEvent, CartBlocState> {
       cartShoesItem.removeWhere((item) => item.title == event.shoes.title);
       emit(CartLoaded(cartShoes: List.from(cartShoesItem)));
     });
+
+    on<RemoveAllItemFromCart>((event, emit) {
+      if (_auth.currentUser != null) {
+        _firebase.removeAllItemsFromCart(_auth.currentUser!.uid);
+      }
+      cartShoesItem.clear();
+      emit(CartLoaded(cartShoes: List.from(cartShoesItem)));
+    });
   }
 }

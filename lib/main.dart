@@ -5,6 +5,7 @@ import 'package:nike_e_shop/domain/gate/auth_gate.dart';
 import 'package:nike_e_shop/firebase_options.dart';
 import 'package:nike_e_shop/presentation/bloc/cart_bloc/bloc/cart_bloc_bloc.dart';
 import 'package:nike_e_shop/presentation/bloc/favorite_bloc/favorite_bloc.dart';
+import 'package:nike_e_shop/presentation/bloc/not_items/bloc/not_bloc.dart';
 import 'package:nike_e_shop/presentation/bloc/user_cards_bloc/bloc/user_card_bloc.dart';
 
 void main() async {
@@ -14,9 +15,6 @@ void main() async {
 
   runApp(const MyApp());
 }
-/**
-   * ! ЗАВЕРШИТЬ ВАЛИДАЦИЮ КАРТЫ И ДОБАВЛЕНИЕ КАРТЫ ТОЛЬКО В СЛУЧАЕ ЗАПОЛНЕНИЯ ВСЕХ ПОЛЕЙ
-   */
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -28,6 +26,7 @@ class MyApp extends StatelessWidget {
         BlocProvider(create: (context) => FavoriteBloc()),
         BlocProvider(create: (context) => CartBloc()),
         BlocProvider(create: (context) => UserCardBloc()),
+        BlocProvider(create: (context) => NotBloc()),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',

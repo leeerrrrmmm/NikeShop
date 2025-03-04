@@ -41,6 +41,7 @@ class AuthService {
         'email': user.email,
         'displayName': user.displayName,
         'password': password,
+        'phone': '',
         'createdAt': FieldValue.serverTimestamp(),
       }, SetOptions(merge: true));
 
@@ -74,48 +75,54 @@ class AuthService {
 
   Future<UserCredential?> registerGoogle() async {
     try {
-      /// НАЧИНАЕМ ПРОЦЕСС ВХОДА ЧЕРЕЗ ГУГЛ
+      // Начинаем процесс входа через Google
       final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
 
-      /// ЕСЛИ ЮЗЕР ОТМЕНИЛ ВХОД
-      if (gUser == null) return null;
+      if (gUser == null) return null; // Если пользователь отменил вход
 
-      /// ПОЛУЧАЕМ ДАННЫЕ АВТОРИЗАЦИИ ОТ ГУГЛ
       final GoogleSignInAuthentication gAuth = await gUser.authentication;
 
-      /// Создаем данные для FIREBASE
       final credential = GoogleAuthProvider.credential(
         accessToken: gAuth.accessToken,
         idToken: gAuth.idToken,
       );
 
-      // ВЫПОЛНЯЕМ ВХОД FIREBASE
+      // Входим в Firebase
       final UserCredential userCredential = await _auth.signInWithCredential(
         credential,
       );
 
-      ///  ПРОВЕРЯЕМ ЕСТЬ-ЛИ ЮЗЕР В БД
-      final userDoc =
-          await _firestore
-              .collection('Users')
-              .doc(userCredential.user!.uid)
-              .get();
+      // Получаем текущего пользователя
+      final User? user = userCredential.user;
 
-      if (userDoc.exists) {
-        /// если записи нет создаем новую
-        await _firestore.collection('Users').doc(userCredential.user!.uid).set({
-          'uid': userCredential.user!.uid,
-          'email': userCredential.user!.email,
-          'name': userCredential.user!.displayName ?? 'Anonymous',
-          'photoUrl': userCredential.user!.photoURL,
-          'phoneNumber': userCredential.user!.phoneNumber,
+      if (user == null) {
+        throw Exception('Ошибка авторизации. Пользователь = null.');
+      }
+
+      // Проверяем, существует ли пользователь в Firestore
+      final userDoc = await _firestore.collection('Users').doc(user.uid).get();
+
+      if (!userDoc.exists) {
+        // Если документа нет, записываем пользователя в Firestore
+        await _firestore.collection('Users').doc(user.uid).set({
+          'uid': user.uid,
+          'email': user.email ?? '',
+          'displayName': user.displayName ?? 'Без имени',
+          'photoUrl': user.photoURL ?? '',
+          'phoneNumber': user.phoneNumber ?? '',
           'createdAt': FieldValue.serverTimestamp(),
         });
+
+        print('Данные пользователя успешно добавлены в Firestore.');
+      } else {
+        print('Пользователь уже существует в Firestore.');
       }
 
       return userCredential;
     } on FirebaseException catch (e) {
-      throw Exception(e.code);
+      throw Exception('Ошибка Firebase: ${e.code}');
+    } catch (e) {
+      throw Exception('Ошибка: $e');
     }
   }
 

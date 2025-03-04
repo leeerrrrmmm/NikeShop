@@ -15,4 +15,10 @@ class RemoveItemFtomCart extends CartBlocEvent {
   RemoveItemFtomCart(this.shoes);
 }
 
+class RemoveAllItemFromCart extends CartBlocEvent {
+  final List<ShoesModel> shoesList;
+
+  RemoveAllItemFromCart(this.shoesList);
+}
+
 class LoadCartsItem extends CartBlocEvent {}

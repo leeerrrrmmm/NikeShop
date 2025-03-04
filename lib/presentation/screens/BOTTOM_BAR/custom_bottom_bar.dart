@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:nike_e_shop/presentation/screens/FAVORITES/favorite_screen.dart';
 import 'package:nike_e_shop/presentation/screens/MAIN/main_screen.dart';
 import 'package:nike_e_shop/presentation/screens/MYCART/cart_screen.dart';
+import 'package:nike_e_shop/presentation/screens/NOTIF/notif_screen.dart';
 import 'package:nike_e_shop/presentation/screens/PROFILE/profile_screen.dart';
 
 class CustomBottomBars extends StatefulWidget {
@@ -18,7 +19,7 @@ class _CustomBottomBarsState extends State<CustomBottomBars> {
   final List<Widget> _screens = [
     MainScreen(),
     FavoriteScreen(),
-    Center(child: Text("Notification")), // Заглушка для Notification
+    NotifScreen(),
     ProfileScreen(),
   ];
 

@@ -70,7 +70,7 @@ extension ShoesModelMapper on ShoesModel {
       'rate': rate,
       'size': size,
       'imageUrl': imageUrl,
-      'likedAt': FieldValue.serverTimestamp(),
+      'addetAt': FieldValue.serverTimestamp(),
     };
   }
 }

@@ -1,15 +1,28 @@
 import 'package:flutter/material.dart';
 
-class BuildColumnWithTextFieldAndText extends StatelessWidget {
+class BuildColumnWithTextFieldAndText extends StatefulWidget {
   final String text;
   final String labelText;
+  final String? Function(String?)? validator;
+  final TextEditingController? controller;
+  final bool? obscureText;
 
   const BuildColumnWithTextFieldAndText({
     super.key,
     required this.text,
     required this.labelText,
+    required this.validator,
+    required this.controller,
+    this.obscureText = false,
   });
 
+  @override
+  State<BuildColumnWithTextFieldAndText> createState() =>
+      _BuildColumnWithTextFieldAndTextState();
+}
+
+class _BuildColumnWithTextFieldAndTextState
+    extends State<BuildColumnWithTextFieldAndText> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -18,26 +31,22 @@ class BuildColumnWithTextFieldAndText extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            text,
+            widget.text,
             style: TextStyle(
+              fontWeight: FontWeight.w500,
               fontFamily: 'Raleway',
               fontSize: 16,
-              fontWeight: FontWeight.w600,
             ),
           ),
-          Container(
-            padding: const EdgeInsets.all(10.0),
-            alignment: Alignment.centerLeft,
-            height: 50,
-            width: double.infinity,
-            decoration: BoxDecoration(
-              border: Border.all(color: Colors.black, width: 1),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            child: Text(
-              textAlign: TextAlign.center,
-              labelText,
-              style: TextStyle(fontSize: 18),
+          TextFormField(
+            validator: widget.validator,
+            controller: widget.controller,
+            obscureText: widget.obscureText!,
+            decoration: InputDecoration(
+              label: Text(widget.labelText),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20),
+              ),
             ),
           ),
         ],

@@ -2,6 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:nike_e_shop/domain/auth/auth_service.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
+import 'package:nike_e_shop/presentation/screens/FAVORITES/favorite_screen.dart';
+import 'package:nike_e_shop/presentation/screens/MYCART/cart_screen.dart';
+import 'package:nike_e_shop/presentation/screens/PROFILE/profile_screen.dart';
 import 'package:nike_e_shop/presentation/screens/SETTINGS/settings_screen.dart';
 
 class DrawerMenu extends StatelessWidget {
@@ -13,6 +16,7 @@ class DrawerMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     final auth = AuthService();
     final curUser = auth.getCurrentUser();
+    final img = curUser!.photoURL;
 
     return Drawer(
       backgroundColor: Color(0xFF0D6EFD),
@@ -21,11 +25,14 @@ class DrawerMenu extends StatelessWidget {
           Column(
             children: [
               CircleAvatar(
-                radius: 49,
-                child: Image.asset('asset/image/nig.png', fit: BoxFit.contain),
+                radius: 50,
+                backgroundImage:
+                    img != null
+                        ? NetworkImage(img)
+                        : AssetImage('asset/image/nig.png'),
               ),
               Text(
-                curUser!.displayName ?? '',
+                curUser.displayName ?? '',
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
@@ -37,28 +44,37 @@ class DrawerMenu extends StatelessWidget {
           ),
           40.hBox,
           _BuildListTileWidget(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(builder: (context) => ProfileScreen()),
+              );
+            },
             scaffoldKey: scaffoldKey,
             text: 'Profile',
             icon: CupertinoIcons.person,
           ),
           _BuildListTileWidget(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(builder: (context) => CartScreen()),
+              );
+            },
             scaffoldKey: scaffoldKey,
             text: 'My Cart',
             icon: CupertinoIcons.bag,
           ),
           _BuildListTileWidget(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                CupertinoPageRoute(builder: (context) => FavoriteScreen()),
+              );
+            },
             scaffoldKey: scaffoldKey,
             text: 'Favorite',
             icon: CupertinoIcons.heart,
-          ),
-          _BuildListTileWidget(
-            onTap: () {},
-            scaffoldKey: scaffoldKey,
-            text: 'Orders',
-            icon: CupertinoIcons.bus,
           ),
           _BuildListTileWidget(
             onTap: () {},

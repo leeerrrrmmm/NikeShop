@@ -39,6 +39,25 @@ class CartDb {
     }
   }
 
+  Future<void> removeAllItemsFromCart(String userId) async {
+    try {
+      QuerySnapshot querySnapshot =
+          await _firesbase
+              .collection('Users')
+              .doc(userId)
+              .collection('CartItem')
+              .get();
+
+      for (QueryDocumentSnapshot doc in querySnapshot.docs) {
+        await doc.reference.delete();
+      }
+
+      print('Все элементы корзины успешно удалены из FIREBASE');
+    } catch (e) {
+      print('Ошибка удаления корзины из FIREBASE: $e');
+    }
+  }
+
   Future<List<ShoesModel>> fetchCartItemsFromFirestore(String userId) async {
     try {
       QuerySnapshot querySnapshot =

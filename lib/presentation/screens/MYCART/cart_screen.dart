@@ -260,14 +260,27 @@ class _CartScreenState extends State<CartScreen> {
                             /// CHECKOUT BTN
                             GestureDetector(
                               onTap: () {
+                                // Сохраняем данные перед очисткой
+                                final itemsToCheckout = [...state.cartShoes];
+                                final subtotal = subTotalPrice;
+                                final delivery = deliveryPrice;
+                                final total = totalCost;
+
+                                // Очищаем корзину
+                                context.read<CartBloc>().add(
+                                  RemoveAllItemFromCart(state.cartShoes),
+                                );
+
+                                // Переход на новый экран
                                 Navigator.push(
                                   context,
                                   CupertinoPageRoute(
                                     builder:
                                         (context) => CheckoutScreen(
-                                          subtotal: subTotalPrice,
-                                          delivery: deliveryPrice,
-                                          totalPrice: totalCost,
+                                          notItems: itemsToCheckout,
+                                          subtotal: subtotal,
+                                          delivery: delivery,
+                                          totalPrice: total,
                                         ),
                                   ),
                                 );

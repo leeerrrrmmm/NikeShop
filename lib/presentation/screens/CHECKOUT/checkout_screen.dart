@@ -1,18 +1,23 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:nike_e_shop/data/models/credit_card_model.dart';
+import 'package:nike_e_shop/data/models/shoes_model.dart';
 import 'package:nike_e_shop/domain/auth/auth_service.dart';
 import 'package:nike_e_shop/extension/size_extension.dart';
+import 'package:nike_e_shop/presentation/bloc/not_items/bloc/not_bloc.dart';
 import 'package:nike_e_shop/presentation/screens/BOTTOM_BAR/custom_bottom_bar.dart';
 import 'package:nike_e_shop/presentation/screens/CHECKOUT/widget/bottom_widget.dart';
 
 class CheckoutScreen extends StatefulWidget {
+  final List<ShoesModel> notItems;
   final double subtotal;
   final double delivery;
   final double totalPrice;
   const CheckoutScreen({
     super.key,
+    required this.notItems,
     required this.subtotal,
     required this.delivery,
     required this.totalPrice,
@@ -53,6 +58,7 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
   }
 
   void showAlert() async {
+    if (!mounted) return;
     showDialog<void>(
       barrierDismissible: false,
       context: context,
@@ -124,6 +130,11 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
 
   String? selectedDropDownButton;
   final curUser = AuthService().getCurrentUser();
+
+  @override
+  void dispose() {
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -290,7 +301,6 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
                         height: 120,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          color: Colors.red,
                           image: DecorationImage(
                             image: NetworkImage(
                               'https://t4.ftcdn.net/jpg/01/24/27/05/360_F_124270591_CtuUNrS8u5uvyH9BFCLgSi4ayLeIzZj2.jpg',
@@ -405,11 +415,18 @@ class _CheckoutScreenState extends State<CheckoutScreen> {
               ),
             ),
             20.hBox,
-            BottomWidget(
-              onTap: showAlert,
-              subtotal: widget.subtotal,
-              delivery: widget.delivery,
-              total: widget.totalPrice,
+            BlocBuilder<NotBloc, NotState>(
+              builder: (context, state) {
+                return BottomWidget(
+                  onTap: () async {
+                    context.read<NotBloc>().add(AddItemToNot(widget.notItems));
+                    showAlert();
+                  },
+                  subtotal: widget.subtotal,
+                  delivery: widget.delivery,
+                  total: widget.totalPrice,
+                );
+              },
             ),
             50.hBox,
           ],
